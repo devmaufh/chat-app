@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Sockets example</title>
+</head>
+<body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+
+    <script src="socket.io.js"></script>
+    <script>
+        var id = 1;
+        var socket = io.connect('http://localhost:3000', { query: "id= " + id });
+
+        socket.emit('chatList', id);
+
+        socket.on('chatListRes', function (data) {
+            if (data.userDisconnected) {
+                console.log(data);
+            } else if (data.userConnected) {
+                console.log(data);
+            } else {
+                console.log(data.chatList);
+            }
+        });
+    </script>
+</body>
+
+</html>
