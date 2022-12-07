@@ -22,9 +22,9 @@
   },
   "homepage": "https://github.com/devmaufh/chat-app#readme",
   "dependencies": {
-    "body-parser": "^1.19.0",
+    "body-parser": "^1.20.1",
     "config": "^3.3.1",
-    "express": "^4.17.1",
+    "express": "^4.18.2",
     "moment": "^2.24.0",
     "pg": "^7.18.2",
     "socket.io": "^2.3.0"
